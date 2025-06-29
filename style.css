@@ -48,12 +48,67 @@ body{
     margin-left: 15vw;
 }
 
+/* grid */
+
+.grid{
+    width: 90vw;
+    height: 73vh;
+    padding: 5vh 5vw 5vh 5vw;
+
+    background-color: rgb(255, 210, 150);
+}
+
+/* prompt */
+
+.prompt{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    width: 35vw;
+    height: 45vh;
+    padding: 0.2vh 1vw 0.7vh 1vw;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+
+    background-color: rgb(255, 186, 101);
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.prompt p{
+    font-size: 1.5vw;
+}
+
+.prompt.active{
+    opacity: 1;
+    pointer-events: auto;
+}
 @media(max-width: 600px){
     .head p{
         font-size: 3vh;
     }
 
     #headButton{
+        width: 30vw;
+        height: 10vh;
         font-size: 2vh;
+    }
+
+    .prompt{
+        width: 60vw;
+        height: 35vh;
+    }
+
+    .prompt p{
+        font-size: 1.5vh;
     }
 }
