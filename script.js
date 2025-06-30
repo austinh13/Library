@@ -15,6 +15,23 @@ function addBookToLibrary(bookName,authorName,numPages,userRead){
 
 function addButtonClicked(){
     const prompt = document.getElementById("prompt");
-    prompt.classList.toggle("active");
+    prompt.classList.toggle("active");  
     
+    for(let i = 0; i < myLibrary.length;i++){
+        console.log(myLibrary[i].name);
+        console.log(myLibrary[i].author);
+        console.log(myLibrary[i].pages);
+    }
+}
+
+function submitClicked(){
+    const title = document.getElementById("title");
+    const author = document.getElementById("author");
+    const pages = document.getElementById("pages");
+
+    addBookToLibrary(title.value,author.value,pages.value,false);
+
+    title.value = "";
+    author.value = "";
+    pages.value = "";
 }
