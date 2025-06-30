@@ -16,4 +16,5 @@ function addBookToLibrary(bookName,authorName,numPages,userRead){
 function addButtonClicked(){
     const prompt = document.getElementById("prompt");
     prompt.classList.toggle("active");
+    
 }
