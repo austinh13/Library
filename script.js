@@ -28,10 +28,14 @@ function submitClicked(){
     const title = document.getElementById("title");
     const author = document.getElementById("author");
     const pages = document.getElementById("pages");
+    const prompt = document.getElementById("prompt");
+    prompt.classList.toggle("active");  
 
     addBookToLibrary(title.value,author.value,pages.value,false);
 
     title.value = "";
     author.value = "";
     pages.value = "";
+
+
 }
