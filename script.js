@@ -17,14 +17,11 @@ function addButtonClicked(){
     const prompt = document.getElementById("prompt");
     prompt.classList.toggle("active");  
     
-    for(let i = 0; i < myLibrary.length;i++){
-        console.log(myLibrary[i].name);
-        console.log(myLibrary[i].author);
-        console.log(myLibrary[i].pages);
-    }
+    
 }
 
 function submitClicked(){
+    const grid = document.getElementById("grid");
     const title = document.getElementById("title");
     const author = document.getElementById("author");
     const pages = document.getElementById("pages");
@@ -33,9 +30,32 @@ function submitClicked(){
 
     addBookToLibrary(title.value,author.value,pages.value,false);
 
+    while (grid.firstChild){
+        grid.removeChild(grid.lastChild);
+    }
+
     title.value = "";
     author.value = "";
     pages.value = "";
 
+    for(let i = 0; i < myLibrary.length;i++){
+        const tile = document.createElement("div");
+        tile.classList.add("tile");
+
+        const title = document.createElement("h1");
+        title.innerHTML = myLibrary[i].name;
+
+        const author = document.createElement("p");
+        author.innerHTML = "By: " + myLibrary[i].author;
+
+        const pages = document.createElement("p");
+        pages.innerHTML = "Pages: " + myLibrary[i].pages;
+
+        tile.appendChild(title);
+        tile.appendChild(author);
+        tile.appendChild(pages);
+
+        grid.appendChild(tile);
+    }
 
 }
