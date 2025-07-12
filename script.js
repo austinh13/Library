@@ -49,9 +49,11 @@ function submitClicked(){
     const author = document.getElementById("author");
     const pages = document.getElementById("pages");
     const prompt = document.getElementById("prompt");
+    const read = document.getElementById("check");
+
     prompt.classList.toggle("active");  
 
-    addBookToLibrary(title.value,author.value,pages.value,false);
+    addBookToLibrary(title.value,author.value,pages.value,read.checked);
 
     while (grid.firstChild){
         grid.removeChild(grid.lastChild);
@@ -60,6 +62,7 @@ function submitClicked(){
     title.value = "";
     author.value = "";
     pages.value = "";
+    read.checked = false;
 
     for(let i = 0; i < myLibrary.length;i++){
         const tile = document.createElement("div");

@@ -85,7 +85,7 @@ body{
 .prompt{
     display: flex;
     flex-direction: column;
-    gap:4vh;
+    gap:2.5vh;
 
     position: fixed;
     top: 50%;
@@ -141,6 +141,15 @@ body{
 
     font-size: 1.8vw;
 }
+
+.switch{
+    font-size: 1vw;
+}
+.check{
+    width: 2vw;
+    height: 2vh;
+}
+
 @media(max-width: 600px){
     .head p{
         font-size: 3vh;
