@@ -1,4 +1,27 @@
 const myLibrary = [];
+const field1 = document.getElementById("title");
+const field2 = document.getElementById("author");
+const field3 = document.getElementById("pages");
+
+field1.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Stops form submission
+    }
+  });
+
+  field2.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Stops form submission
+    }
+  });
+
+  field3.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Stops form submission
+    }
+  });
+
+
 
 function Book(bookName,authorName,numPages,userRead) {
     const book = new Object();
