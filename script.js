@@ -77,9 +77,21 @@ function submitClicked(){
         const pages = document.createElement("p");
         pages.innerHTML = "Pages: " + myLibrary[i].pages;
 
+        const check = document.createElement("input");
+        check.type = "checkbox";
+        check.classList.add("check");
+
+        if(myLibrary[i].read){
+            tile.style.backgroundColor = "rgba(0, 255, 0, 0.3)";
+            check.checked = true;
+        }
+        else{
+            tile.style.backgroundColor = "rgba(255, 0, 0, 0.3)";
+        }
         tile.appendChild(title);
         tile.appendChild(author);
         tile.appendChild(pages);
+        tile.appendChild(check);
 
         grid.appendChild(tile);
     }

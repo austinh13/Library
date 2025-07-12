@@ -69,6 +69,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1vh;
 
     border-radius: 5px;
 }
@@ -79,6 +80,7 @@ body{
 
 .tile p{
     font-size: 1.5vw;
+    margin: 1vh 0vw 1vh 0vw;
 }
 /* prompt */
 
