@@ -81,13 +81,24 @@ function submitClicked(){
         check.type = "checkbox";
         check.classList.add("check");
 
+        check.addEventListener('change', function() {
+        if (check.checked) {
+          console.log("checked");
+          // You can call any function or perform any action here
+        } else {
+          console.log("unchecked");
+        }
+      });
+        
+
         if(myLibrary[i].read){
-            tile.style.backgroundColor = "rgba(0, 255, 0, 0.3)";
+            tile.style.backgroundColor = "rgba(0, 255, 0, 0.25)";
             check.checked = true;
         }
         else{
-            tile.style.backgroundColor = "rgba(255, 0, 0, 0.3)";
+            tile.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
         }
+
         tile.appendChild(title);
         tile.appendChild(author);
         tile.appendChild(pages);
