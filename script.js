@@ -83,20 +83,20 @@ function submitClicked(){
 
         check.addEventListener('change', function() {
         if (check.checked) {
-          console.log("checked");
-          // You can call any function or perform any action here
+          check.parentElement.style.backgroundColor = "rgba(0, 255, 0, 0.1)";
         } else {
-          console.log("unchecked");
+          check.parentElement.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
         }
       });
+
         
 
         if(myLibrary[i].read){
-            tile.style.backgroundColor = "rgba(0, 255, 0, 0.25)";
+            tile.style.backgroundColor = "rgba(0, 255, 0, 0.2)";
             check.checked = true;
         }
         else{
-            tile.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
+            tile.style.backgroundColor = "rgba(255, 0, 0, 0.2)";
         }
 
         tile.appendChild(title);
