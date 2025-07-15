@@ -158,6 +158,14 @@ body{
     height: 2vh;
 }
 
+#cornerText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+  }
+
 @media(max-width: 600px){
     .head p{
         font-size: 3vh;
