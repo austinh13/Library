@@ -92,11 +92,11 @@ function submitClicked(){
         
 
         if(myLibrary[i].read){
-            tile.style.backgroundColor = "rgba(0, 255, 0, 0.2)";
+            tile.style.backgroundColor = "rgba(0, 255, 0, 0.1)";
             check.checked = true;
         }
         else{
-            tile.style.backgroundColor = "rgba(255, 0, 0, 0.2)";
+            tile.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
         }
 
         tile.appendChild(title);
